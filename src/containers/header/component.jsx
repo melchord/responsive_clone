@@ -3,5 +3,7 @@ import React from 'react';
 import './index.scss';
 
 const Component = () => {
-  return <div>CTA</div>;
+  return <div>Header</div>;
 };
+
+export default Component;

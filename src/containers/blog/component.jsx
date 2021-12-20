@@ -3,5 +3,7 @@ import React from 'react';
 import './index.scss';
 
 const Component = () => {
-  return <div>Article</div>;
+  return <div>Blog</div>;
 };
+
+export default Component;

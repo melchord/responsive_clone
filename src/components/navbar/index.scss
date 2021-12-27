@@ -1,4 +1,134 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 6rem;
+
   .navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .navbar-links-logo {
+      margin-right: 2rem;
+      img {
+        width: 62.56px;
+        height: 16.02px;
+      }
+    }
+
+    .navbar-links-container {
+      display: flex;
+      flex-direction: row;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      a {
+        color: #fff;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: capitalize;
+
+        margin: 0 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+      margin: 0 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background: #ff4820;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+
+  .navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    .navbar-menu-container {
+      text-align: end;
+      background: var(--color-footer);
+      padding: 2rem;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      margin-top: 1rem;
+      min-width: 210px;
+      border-radius: 5px;
+
+      .menu-container-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        a {
+          color: #fff;
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 25px;
+          text-transform: capitalize;
+
+          margin: 0 1rem;
+          cursor: pointer;
+        }
+      }
+
+      .menu-container-links-sign {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  navbar {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar {
+    padding: 2rem;
+  }
+
+  .navbar-sign {
+    display: none;
+  }
+
+  .navbar-menu-container {
+    top: 20px;
+
+    .navbar-menu-container-links-sign {
+      display: block;
+    }
   }
 }
